@@ -80,7 +80,7 @@ basic.forever(function () {
             SuperBit.Servo2(SuperBit.enServo.S1, i)
             basic.pause(2)
         }
-        duoji_s1 = "0"
+        duoji_s1 = "270"
     } else if ("2" == duoji_s1) {
         SuperBit.Servo2(SuperBit.enServo.S1, 270)
         i = 270
