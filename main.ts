@@ -4,10 +4,31 @@ input.onButtonPressed(Button.A, function () {
 radio.onReceivedString(function (receivedString) {
     item = "receivedString"
     if ("C" == item) {
+        basic.showLeds(`
+            . # # # .
+            . # . . .
+            . # . . .
+            . # . . .
+            . # # # .
+            `)
         SuperBit.MotorRun(SuperBit.enMotors.M3, 128)
     } else if ("D" == item) {
+        basic.showLeds(`
+            . # # # .
+            . # . . #
+            . # . . #
+            . # . . #
+            . # # # .
+            `)
         SuperBit.MotorRun(SuperBit.enMotors.M3, -117)
     } else if ("0" == item) {
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `)
         SuperBit.MotorRun(SuperBit.enMotors.M3, 0)
     } else {
     	
