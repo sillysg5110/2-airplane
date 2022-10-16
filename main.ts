@@ -2,8 +2,8 @@ input.onButtonPressed(Button.A, function () {
     SuperBit.MotorRun(SuperBit.enMotors.M3, 119)
 })
 radio.onReceivedString(function (receivedString) {
-    item = "receivedString"
-    if ("C" == item) {
+    item = receivedString
+    if (receivedString == "C") {
         basic.showLeds(`
             . # # # .
             . # . . .
@@ -11,7 +11,7 @@ radio.onReceivedString(function (receivedString) {
             . # . . .
             . # # # .
             `)
-        SuperBit.MotorRun(SuperBit.enMotors.M3, 128)
+        SuperBit.MotorRun(SuperBit.enMotors.M3, 255)
     } else if ("D" == item) {
         basic.showLeds(`
             . # # # .
@@ -20,8 +20,8 @@ radio.onReceivedString(function (receivedString) {
             . # . . #
             . # # # .
             `)
-        SuperBit.MotorRun(SuperBit.enMotors.M3, -117)
-    } else if ("0" == item) {
+        SuperBit.MotorRun(SuperBit.enMotors.M3, -255)
+    } else if ("E" == item) {
         basic.showLeds(`
             # . . . #
             . # . # .
